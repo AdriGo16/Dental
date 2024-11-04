@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Dentistas</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- CDN de FontAwesome -->
+    
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+            <img src="IMG/logo.png" alt="Logo de la Empresa" width="100">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="HTML/Odontologia.html">Odontología</a></li> <!-- Redirige a la vista de Odontología -->
+                        <li><a href="HTML/Ortodoncia.html">Ortodoncia</a></li> <!-- Redirige a la vista de Ortodoncia -->
+                        <li><a href="HTML/Implantes.html">Implantes</a></li> <!-- Redirige a la vista de Implantes -->
+                        <li><a href="HTML/Endodoncia.html">Endodoncia</a></li> <!-- Redirige a la vista de Endodoncia -->
+                        <li><a href="HTML/Estetica.html">Estética Dental</a></li> <!-- Redirige a la vista de Estética Dental -->
+                        <li><a href="HTML/CadCam.html">CAD CAM</a></li> <!-- Redirige a la vista de CAD CAM -->
+                        <li><a href="HTML/Blanqueamiento.html">Blanqueamiento</a></li> <!-- Redirige a la vista de Blanqueamiento -->
+                    </ul>
+                </li>
+                <li><a href="HTML/Consejos.html">Consejos</a></li>
+                <li><a href="HTML/Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Sección del eslogan -->
+    <div class="slogan">
+        <h1>DENTAL ARCADA</h1>
+        <p>El tratamiento que necesitas esta cerca de ti.</p>
+        <a href="https://wa.me/521234567890" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Contáctanos! <!-- Icono de WhatsApp desde FontAwesome -->
+        </a>
+    </div>
+
+    <!-- Contenedor del slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="IMG/Cliente.jpg" alt="Imagen 1">
+            <img src="IMG/D1.PNG" alt="Imagen 2">
+            <img src="IMG/c3.jpg" alt="Imagen 3">
+            <img src="IMG/D4.jpg" alt="Imagen 4">
+            <img src="IMG/c2.jpg" alt="Imagen 5">
+            <img src="IMG/C1.jpg" alt="Imagen 6">
+        </div>
+    </div>
+
+    <!-- Sección de Comentarios -->
+    <section id="comentarios">
+        <h2>Lo Que Dicen Nuestros Pacientes</h2>
+        <div class="comentarios-container">
+            <div class="comentario active">
+                <img src="IMG/c3.jpg" alt="Usuario 1" width="50">
+                <div class="calificacion">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p>"El servicio fue excepcional, muy contento con mi tratamiento."</p>
+                <h4>- Juan Pérez</h4>
+            </div>
+            <div class="comentario">
+                <img src="IMG/C1.jpg" alt="Usuario 2" width="50">
+                <div class="calificacion">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p>"Excelentes profesionales, me hicieron sentir muy cómodo."</p>
+                <h4>- María González</h4>
+            </div>
+            <div class="comentario">
+                <img src="IMG/CD.jpg" alt="Usuario 3" width="50">
+                <div class="calificacion">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p>"Siempre un gran trato, totalmente recomendado."</p>
+                <h4>- Carlos López</h4>
+            </div>
+            <div class="comentario">
+                <img src="IMG/Cliente.jpg" alt="Usuario 4" width="50">
+                <div class="calificacion">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p>"La mejor experiencia dental que he tenido."</p>
+                <h4>- Ana Torres</h4>
+            </div>
+        </div>
+    </section>
+
+   <!-- Descripción del personal -->
+    <section id="personal">
+        <h2>Conoce a Nuestro Personal</h2>
+        <div class="personal-container">
+            <div class="personal-card">
+                <img src="IMG/dentista.jpeg" alt="Dentista 1" width="150">
+                <h3>Dr. Juan Pérez</h3>
+                <p>Especialista en ortodoncia.</p>
+                <a href="#" class="saber-mas" 
+                data-name="Dr. Juan Pérez" 
+                data-nationality="Mexicano" 
+                data-education="Licenciatura en Odontología" 
+                data-age="35" 
+                data-specialty="Ortodoncia"
+                data-image="IMG/dentista.jpeg">Saber más</a>
+            </div>
+            <div class="personal-card">
+                <img src="IMG/D1.PNG" alt="Dentista 2" width="150">
+                <h3>Dra. María López</h3>
+                <p>Experta en odontología general.</p>
+                <a href="#" class="saber-mas" 
+                data-name="Dra. María López" 
+                data-nationality="Mexicana" 
+                data-education="Licenciatura en Odontología" 
+                data-age="30" 
+                data-specialty="Odontología General"
+                data-image="IMG/D1.PNG">Saber más</a> <!-- Asegúrate de usar la imagen correcta -->
+            </div>
+            <div class="personal-card">
+                <img src="IMG/D4.jpg" alt="Dentista 3" width="150">
+                <h3>Dr. Carlos Ruiz</h3>
+                <p>Especialista en cirugía oral.</p>
+                <a href="#" class="saber-mas" 
+                data-name="Dr. Carlos Ruiz" 
+                data-nationality="Mexicano" 
+                data-education="Especialidad en Cirugía Oral" 
+                data-age="40" 
+                data-specialty="Cirugía Oral"
+                data-image="IMG/D4.jpg">Saber más</a> <!-- Cambiar a la imagen correcta -->
+            </div>
+            <div class="personal-card">
+                <img src="IMG/D2.PNG" alt="Dentista 4" width="150">
+                <h3>Dra. Ana Torres</h3>
+                <p>Odontopediatra.</p>
+                <a href="#" class="saber-mas" 
+                data-name="Dra. Ana Torres" 
+                data-nationality="Mexicana" 
+                data-education="Licenciatura en Odontología" 
+                data-age="28" 
+                data-specialty="Odontopediatría"
+                data-image="IMG/D2.PNG">Saber más</a> <!-- Asegúrate de usar la imagen correcta -->
+            </div>
+            <div class="personal-card">
+                <img src="IMG/D3.PNG" alt="Dentista 5" width="150">
+                <h3>Dr. Luis Fernández</h3>
+                <p>Especialista en periodoncia.</p>
+                <a href="#" class="saber-mas" 
+                data-name="Dr. Luis Fernández" 
+                data-nationality="Mexicano" 
+                data-education="Licenciatura en Odontología" 
+                data-age="45" 
+                data-specialty="Periodoncia"
+                data-image="IMG/D3.PNG">Saber más</a> <!-- Cambiar a la imagen correcta -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-name"></h3>
+            <img id="modal-image" src="" alt="" width="150" style="border-radius: 5px;">
+            <p><strong>Nacionalidad:</strong> <span id="modal-nationality"></span></p>
+            <p><strong>Estudios:</strong> <span id="modal-education"></span></p>
+            <p><strong>Edad:</strong> <span id="modal-age"></span></p>
+            <p><strong>Especialidad:</strong> <span id="modal-specialty"></span></p>
+            <button id="close-modal" class="button-volver">Volver</button> <!-- Botón "Volver" -->
+        </div>
+    </div>
+
+    <!-- Mapa de sucursales -->
+    <section id="sucursales">
+        <h2 class="titulo-principal">Nuestras Sucursales</h2>
+        <div class="contenedor-sucursales">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2587844962446!2d-102.67826618495566!3d22.775446084034172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662754dfb1e7a0f%3A0x8e4d9f8bafbb0cc9!2sZacatecas%2C%20Zacatecas%2C%20Mexico!5e0!3m2!1ses!2sus!4v1692392395401!5m2!1ses!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="lista-sucursales">
+                <div class="tabla-sucursales">
+                    <div class="fila-sucursal sucursal-zacatecas" data-info="info-zacatecas">
+                        <h3>Zacatecas</h3>
+                        <div class="info-sucursal" id="info-zacatecas">
+                            <p>Calle Ejemplo 123<br>Colonia Centro<br>Código Postal: 98000<br>Municipio: Zacatecas<br>Teléfono: (012) 345-6789</p>
+                        </div>
+                    </div>
+                    <div class="fila-sucursal sucursal-calera" data-info="info-calera">
+                        <h3>Calera</h3>
+                        <div class="info-sucursal" id="info-calera">
+                            <p>Calle Ejemplo 456<br>Colonia La Paz<br>Código Postal: 98020<br>Municipio: Calera<br>Teléfono: (012) 345-6790</p>
+                        </div>
+                    </div>
+                    <div class="fila-sucursal sucursal-fresnillo" data-info="info-fresnillo">
+                        <h3>Fresnillo</h3>
+                        <div class="info-sucursal" id="info-fresnillo">
+                            <p>Calle Ejemplo 789<br>Colonia San Miguel<br>Código Postal: 98030<br>Municipio: Fresnillo<br>Teléfono: (012) 345-6791</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container">
+            <div class="servicio odontologia">
+                <img src="IMG/Odontologia.png" alt="Doctor" class="icono">
+                <h3>Odontología</h3>
+                <p>Chequeos dentales y limpiezas para una salud bucal óptima.</p>
+                <a href="HTML/Odontologia.html">Ver más</a>
+            </div>
+            <div class="servicio ortodoncia">
+                <img src="IMG/Ortodoncia.png" alt="Dientes con brackets" class="icono">
+                <h3>Ortodoncia</h3>
+                <p>Corrección de dientes mal posicionados con brackets y alineadores.</p>
+                <a href="HTML/Ortodoncia.html">Ver más</a>
+            </div>
+            <div class="servicio implantes">
+                <img src="IMG/Implantes.png" alt="Diente y herramienta" class="icono">
+                <h3>Implantes</h3>
+                <p>Reemplazo de dientes perdidos con implantes duraderos.</p>
+                <a href="HTML/Implantes.html">Ver más</a>
+            </div>
+            <div class="servicio endodoncia">
+                <img src="IMG/Endodoncia.png" alt="Diente con lupa" class="icono">
+                <h3>Endodoncia</h3>
+                <p>Tratamientos de conducto para conservar dientes dañados.</p>
+                <a href="HTML/Endodoncia.html">Ver más</a>
+            </div>
+            <div class="servicio estetica">
+                <img src="IMG/Estetica.png" alt="Diente brillante" class="icono">
+                <h3>Estética Dental</h3>
+                <p>Mejora de la apariencia de tu sonrisa con procedimientos cosméticos.</p>
+                <a href="HTML/Estetica.html">Ver más</a>
+            </div>
+            <div class="servicio cad-cam">
+                <img src="IMG/Cad.png" alt="Diente y computadora" class="icono">
+                <h3>CAD CAM</h3>
+                <p>Diseño asistido para prótesis dentales de alta precisión.</p>
+                <a href="HTML/CadCam.html">Ver más</a>
+            </div>
+            <div class="servicio blanqueamiento">
+                <img src="IMG/Blanqueamiento.png" alt="Diente iluminado" class="icono">
+                <h3>Blanqueamiento</h3>
+                <p>Procedimientos seguros para una sonrisa más brillante.</p>
+                <a href="HTML/Blanqueamiento.html">Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="temas-interes">
+        <h2>Temas de Interés sobre el Cuidado Bucal</h2>
+        
+        <!-- Botones Ovalados -->
+        <div class="categorias">
+            <button class="categoria-btn" onclick="cambiarCategoria('dientes')">Dientes Blancos</button>
+            <button class="categoria-btn" onclick="cambiarCategoria('ortodoncia')">Ortodoncia</button>
+            <button class="categoria-btn" onclick="cambiarCategoria('endodoncia')">Endodoncia</button>
+        </div>
+        
+        <!-- Contenedor de tarjetas -->
+        <div class="temas-container">
+            <!-- Tarjetas para Dientes Blancos -->
+            <div class="tema-card dientes">
+                <img src="IMG/TI1.jpg" alt="Dientes Blancos">
+                <div class="tema-content">
+                    <h3>Blanqueamiento Dental</h3>
+                    <p>Conoce las opciones para aclarar tus dientes y lograr una sonrisa radiante.</p>
+                    <a href="#" data-que-es="Es un procedimiento que ayuda a blanquear los dientes." data-prevenir="Mantén una buena higiene dental y evita alimentos que manchen." data-solucion="Consulta a tu dentista sobre tratamientos de blanqueamiento.">Leer más</a>
+                </div>
+            </div>
+            <div class="tema-card dientes">
+                <img src="IMG/LD.jpg" alt="Limpieza Dental">
+                <div class="tema-content">
+                    <h3>Limpieza Dental</h3>
+                    <p>Mantén tus dientes blancos con limpiezas regulares para eliminar manchas.</p>
+                    <a href="#" data-que-es="Es un procedimiento dental para eliminar placa y sarro." data-prevenir="Realiza limpiezas cada seis meses." data-solucion="Visita a tu dentista para programar limpiezas regulares.">Leer más</a>
+                </div>
+            </div>
+            <div class="tema-card dientes">
+                <img src="IMG/CD.jpg" alt="Cuidado Diario">
+                <div class="tema-content">
+                    <h3>Cuidado Diario</h3>
+                    <p>Aprende cómo la rutina diaria puede prevenir el desgaste y las manchas.</p>
+                    <a href="#" data-que-es="Es la práctica de cepillarse y usar hilo dental diariamente." data-prevenir="Cepíllate al menos dos veces al día." data-solucion="Sigue una rutina de cuidado dental adecuada.">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjetas para Ortodoncia -->
+            <div class="tema-card ortodoncia">
+                <img src="IMG/BR.jpg" alt="Brackets">
+                <div class="tema-content">
+                    <h3>Brackets</h3>
+                    <p>Corrige la alineación de tus dientes con distintos tipos de brackets.</p>
+                    <a href="#" data-que-es="Son dispositivos utilizados para alinear los dientes." data-prevenir="Sigue las instrucciones del ortodoncista." data-solucion="Consulta sobre diferentes tipos de brackets disponibles.">Leer más</a>
+                </div>
+            </div>
+            <div class="tema-card ortodoncia">
+                <img src="IMG/AI.jpg" alt="Alineadores">
+                <div class="tema-content">
+                    <h3>Alineadores Invisibles</h3>
+                    <p>Alineadores transparentes como alternativa a los brackets tradicionales.</p>
+                    <a href="#" data-que-es="Son férulas transparentes que mueven los dientes." data-prevenir="Usa los alineadores según lo indicado." data-solucion="Consulta con tu ortodoncista sobre su uso.">Leer más</a>
+                </div>
+            </div>
+            <div class="tema-card ortodoncia">
+                <img src="IMG/RD.jpg" alt="Retenedores">
+                <div class="tema-content">
+                    <h3>Retenedores</h3>
+                    <p>Descubre la importancia de los retenedores después del tratamiento.</p>
+                    <a href="#" data-que-es="Son dispositivos que mantienen los dientes en su nueva posición." data-prevenir="Usa los retenedores según las indicaciones." data-solucion="Habla con tu ortodoncista sobre el mantenimiento de la alineación.">Leer más</a>
+                </div>
+            </div>
+
+            <!-- Tarjetas para Endodoncia -->
+            <div class="tema-card endodoncia">
+                <img src="IMG/CD.jpg" alt="Tratamiento de Conducto">
+                <div class="tema-content">
+                    <h3>Tratamiento de Conducto</h3>
+                    <p>Salva tus dientes afectados por infecciones graves con este tratamiento.</p>
+                    <a href="#" data-que-es="Es un tratamiento para eliminar infecciones del conducto radicular." data-prevenir="Evita la caries y realiza chequeos regulares." data-solucion="Consulta con un endodoncista para el tratamiento.">Leer más</a>
+                </div>
+            </div>
+            <div class="tema-card endodoncia">
+                <img src="IMG/PD.jpeg" alt="Protección de Dientes">
+                <div class="tema-content">
+                    <h3>Protección Dental</h3>
+                    <p>Métodos para proteger los dientes tras el tratamiento de conducto.</p>
+                    <a href="#" data-que-es="Son métodos para preservar la salud dental después del tratamiento." data-prevenir="Mantén buenas prácticas de higiene oral." data-solucion="Usa coronas o tratamientos recomendados por tu dentista.">Leer más</a>
+                </div>
+            </div>
+            <div class="tema-card endodoncia">
+                <img src="IMG/RT.jpg" alt="Rehabilitación">
+                <div class="tema-content">
+                    <h3>Rehabilitación</h3>
+                    <p>Opciones para rehabilitar y fortalecer dientes después de una endodoncia.</p>
+                    <a href="#" data-que-es="Es el proceso para restaurar la funcionalidad dental." data-prevenir="Realiza revisiones periódicas." data-solucion="Consulta sobre implantes o coronas para restaurar la función.">Leer más</a>
+                </div>
+            </div>
+        </div>
+        </section>   
+        
+    <!-- Modal para Temas de Interés -->
+    <div id="temaInteresModal" class="tema-modal">
+        <div class="tema-modal-content">
+            <span class="tema-close" onclick="cerrarTemaModal()">&times;</span>
+            <h3 id="temaInteres-modal-title"></h3>
+            <img id="temaInteres-modal-image" src="" alt="Imagen de tema" class="tema-modal-image">
+            <div id="temaInteres-modal-description" class="tema-modal-text">
+                <p><strong>¿Qué es?</strong> <span id="temaInteres-que-es"></span></p>
+                <p><strong>Cómo prevenir:</strong> <span id="temaInteres-prevenir"></span></p>
+                <p><strong>Solución:</strong> <span id="temaInteres-solucion"></span></p>
+            </div>
+            <button onclick="agendarCita()" class="tema-agendar-btn">Agendar tu cita</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>DentalArcada</h2>
+                    <p>Un equipo de personal especializado que mejorará tus dientes y tu sonrisa.</p>
+                    <ul class="contact">
+                        <li><a href="tel:4939335547"><i class="fas fa-phone"></i> 493 933 5547</a></li>
+                        <li><a href="mailto:contacto@dentalarcada.mx"><i class="fas fa-envelope"></i> contacto@dentalarcada.mx</a></li>
+                        <li><a href="https://dentalarcada.mx"><i class="fas fa-globe"></i> dentalarcada.mx</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Acerca de</h2>
+                    <ul>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Consejos</a></li>
+                        <li><a href="#">Aviso de Privacidad</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Agendar Cita</a></li>
+                        <li><a href="#">Arriba</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Reconocimientos</h2>
+                    <img src="IMG/reconocimiento2.png" alt="Logo">
+                    <p>Certificados por la Asociación Americana de Cirugía</p>
+                </div>
+                <div class="col">
+                    <h2>Nuestras Redes</h2>
+                    <p>Visita DentalArcada en nuestras redes sociales y conéctese con nosotros. Asegúrate de seguir nuestras cuentas para actualizaciones periódicas.</p>
+                    <ul class="social">
+                        <li ><a href="https://www.facebook.com/DentalArcada/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/dentalarcada/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/DentalArcada"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+   <!--  <script src="../JS/ModalCabecera.js"></script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener el modal principal, el botón de cierre y el botón de "Volver"
+            var modal = document.getElementById("modal");
+            var closeButton = document.getElementById("close-modal");
+            
+            // Agregar evento a los enlaces "Saber más"
+            var saberMasLinks = document.querySelectorAll('.saber-mas');
+            saberMasLinks.forEach(function(link) {
+                link.onclick = function(event) {
+                    event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+                    
+                    // Obtener datos del atributo del enlace
+                    var name = this.getAttribute('data-name');
+                    var nationality = this.getAttribute('data-nationality');
+                    var education = this.getAttribute('data-education');
+                    var age = this.getAttribute('data-age');
+                    var specialty = this.getAttribute('data-specialty');
+                    var image = this.getAttribute('data-image'); // Obtener la imagen
+        
+                    // Rellenar el modal con la información obtenida
+                    document.getElementById("modal-name").textContent = name;
+                    document.getElementById("modal-nationality").textContent = nationality;
+                    document.getElementById("modal-education").textContent = education;
+                    document.getElementById("modal-age").textContent = age;
+                    document.getElementById("modal-specialty").textContent = specialty;
+                    document.getElementById("modal-image").src = image; // Establecer la fuente de la imagen
+                    
+                    // Mostrar el modal con animación
+                    modal.style.display = "block"; // Primero mostrar el modal
+                    setTimeout(() => {
+                        modal.classList.add('show'); // Agregar clase para la animación
+                    }, 10); // Timeout para permitir que el cambio de estilo se aplique
+                };
+            });
+        
+            // Cerrar el modal al hacer clic en el botón "Volver"
+            closeButton.onclick = function() {
+                modal.classList.remove('show'); // Remover clase de animación
+                setTimeout(() => {
+                    modal.style.display = "none"; // Ocultar modal después de la animación
+                }, 500); // Esperar a que termine la animación
+            };
+        
+            // Cerrar el modal al hacer clic fuera de su contenido
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) { 
+                    modal.classList.remove('show'); // Remover clase de animación
+                    setTimeout(() => {
+                        modal.style.display = "none"; // Ocultar modal después de la animación
+                    }, 500); // Esperar a que termine la animación
+                }
+            });
+        });
+        
+    
+        // Función para manejar la rotación de comentarios
+        document.addEventListener('DOMContentLoaded', () => {
+            const comentarios = document.querySelectorAll('.comentario');
+            let currentIndex = 0;
+    
+            // Función para mostrar el comentario actual
+            function mostrarComentario(index) {
+                comentarios.forEach((comentario, i) => {
+                    comentario.classList.remove('active');
+                    if (i === index) {
+                        comentario.classList.add('active');
+                    }
+                });
+            }
+    
+            // Función para rotar comentarios cada 5 segundos
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % comentarios.length; // Cambia al siguiente índice
+                mostrarComentario(currentIndex);
+            }, 5000);
+    
+            // Mostrar el primer comentario al cargar
+            mostrarComentario(currentIndex);
+        });
+    
+      // Seleccionar todas las filas de sucursales
+    const filasSucursal = document.querySelectorAll('.fila-sucursal');
+    // Seleccionar el iframe del mapa
+    const mapaIframe = document.querySelector('.mapa iframe');
+
+    // Definir las URLs del mapa de cada ubicación (asegúrate de que estén centradas)
+    const ubicaciones = {
+        fresnillo: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2587844962446!2d-102.67900018495566!3d22.775446084034172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662754dfb1e7a0f%3A0x8e4d9f8bafbb0cc9!2sFresnillo%2C%20Zacatecas%2C%20Mexico!5e0!3m2!1ses!2sus!4v1692392395401!5m2!1ses!2sus',
+        calera: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2587844962446!2d-102.66700018495566!3d22.700446084034172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662754dfb1e7a0f%3A0x8e4d9f8bafbb0cc9!2sCalera%2C%20Zacatecas%2C%20Mexico!5e0!3m2!1ses!2sus!4v1692392395401!5m2!1ses!2sus',
+        zacatecas: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2587844962446!2d-102.67826618495566!3d22.775446084034172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662754dfb1e7a0f%3A0x8e4d9f8bafbb0cc9!2sZacatecas%2C%20Zacatecas%2C%20Mexico!5e0!3m2!1ses!2sus!4v1692392395401!5m2!1ses!2sus'
+    };
+
+    // URL del mapa por defecto (por ejemplo, el mapa de Zacatecas)
+    const mapaPorDefecto = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.2587844962446!2d-102.67826618495566!3d22.775446084034172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662754dfb1e7a0f%3A0x8e4d9f8bafbb0cc9!2sZacatecas%2C%20Zacatecas%2C%20Mexico!5e0!3m2!1ses!2sus!4v1692392395401!5m2!1ses!2sus';
+
+    // Agregar un evento de clic a cada fila para mostrar/ocultar información de la sucursal y cambiar el mapa
+    filasSucursal.forEach(fila => {
+        fila.addEventListener('click', () => {
+            // Seleccionar la información de la sucursal dentro de la fila actual
+            const infoSucursal = fila.querySelector('.info-sucursal');
+
+            // Alternar la visibilidad de la información
+            if (infoSucursal.style.display === 'block') {
+                infoSucursal.style.display = 'none'; // Ocultar si ya está visible
+                // Verificar si todas las filas están ocultas para volver al mapa por defecto
+                const todasOcultas = Array.from(filasSucursal).every(f => f.querySelector('.info-sucursal').style.display === 'none');
+                if (todasOcultas) {
+                    mapaIframe.src = mapaPorDefecto; // Volver a la opción por defecto
+                }
+            } else {
+                // Ocultar otras informaciones
+                filasSucursal.forEach(f => {
+                    if (f !== fila) {
+                        f.querySelector('.info-sucursal').style.display = 'none';
+                    }
+                });
+                infoSucursal.style.display = 'block'; // Mostrar si está oculta
+
+                // Cambiar la ubicación en el mapa según la sucursal seleccionada
+                if (fila.classList.contains('sucursal-fresnillo')) {
+                    mapaIframe.src = ubicaciones.fresnillo;
+                } else if (fila.classList.contains('sucursal-calera')) {
+                    mapaIframe.src = ubicaciones.calera;
+                } else if (fila.classList.contains('sucursal-zacatecas')) {
+                    mapaIframe.src = ubicaciones.zacatecas;
+                }
+            }
+        });
+    });
+
+    
+        // Función para cambiar la categoría de tarjetas
+        function cambiarCategoria(categoria) {
+            // Remueve la clase active de todas las tarjetas y botones de categoría
+            document.querySelectorAll('.tema-card').forEach(card => card.classList.remove('active'));
+            document.querySelectorAll('.categoria-btn').forEach(btn => btn.classList.remove('active'));
+
+            // Añade la clase active solo a las tarjetas de la categoría seleccionada
+            document.querySelectorAll(`.${categoria}`).forEach(card => card.classList.add('active'));
+            document.querySelector(`[onclick="cambiarCategoria('${categoria}')"]`).classList.add('active');
+        }
+
+        // Mostrar una categoría por defecto al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            cambiarCategoria('dientes');
+        });
+
+        // Función para abrir el modal con el contenido de Tema de Interés
+        document.querySelectorAll('.tema-card a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+                const card = this.closest('.tema-card');
+
+                // Obtener datos de los atributos personalizados
+                const title = card.querySelector('h3').textContent; // Título del tema
+                const image = card.querySelector('img').src; // Imagen del tema
+                const queEs = this.getAttribute('data-que-es'); // Descripción del tema
+                const prevenir = this.getAttribute('data-prevenir'); // Prevención del tema
+                const solucion = this.getAttribute('data-solucion'); // Solución del tema
+
+                // Actualizar contenido del modal
+                document.getElementById("temaInteres-modal-title").textContent = title;
+                document.getElementById("temaInteres-modal-image").src = image;
+                document.getElementById("temaInteres-que-es").textContent = queEs;
+                document.getElementById("temaInteres-prevenir").textContent = prevenir;
+                document.getElementById("temaInteres-solucion").textContent = solucion;
+
+                // Mostrar el modal con animación
+                const modal = document.getElementById("temaInteresModal");
+                modal.style.display = "block";
+                setTimeout(() => {
+                    modal.classList.add('active-modal'); // Clase para animación de entrada
+                }, 10);
+            });
+        });
+
+        // Función para cerrar el modal de Temas de Interés con animación
+        function cerrarTemaModal() {
+            const modal = document.getElementById("temaInteresModal");
+            modal.classList.remove('active-modal'); // Remueve la clase de animación de entrada
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300); // Tiempo de espera para permitir que la animación se complete antes de ocultar
+        }
+
+        // Cerrar modal cuando se hace clic fuera del contenido
+        window.onclick = function(event) {
+            const modal = document.getElementById("temaInteresModal");
+            if (event.target == modal) {
+                cerrarTemaModal();
+            }
+        };
+            
+        // Función para agendar cita (puedes personalizarla)
+        function agendarCita() {
+            alert("Función para agendar cita.");
+        }
+    
+        // Seleccionar todos los elementos de menú
+        const menuItems = document.querySelectorAll('nav ul li');
+    
+        // Variable para rastrear el submenu abierto
+        let activeSubmenu = null;
+    
+        // Añadir evento para mostrar el submenu al hacer clic
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                // Prevenir el cierre de submenus si ya está activo
+                if (activeSubmenu && activeSubmenu !== item) {
+                    activeSubmenu.querySelector('.submenu').style.display = 'none'; // Ocultar el submenu activo
+                }
+    
+                // Alternar el submenu del item actual
+                const submenu = item.querySelector('.submenu');
+                if (submenu) {
+                    const isVisible = submenu.style.display === 'block';
+                    submenu.style.display = isVisible ? 'none' : 'block'; // Alternar la visibilidad
+                    activeSubmenu = isVisible ? null : item; // Actualizar el submenu activo
+                }
+    
+                // Evitar que el clic se propague al documento
+                event.stopPropagation();
+            });
+        });
+    
+        // Cerrar el submenu si se hace clic fuera de él
+        document.addEventListener('click', function() {
+            if (activeSubmenu) {
+                activeSubmenu.querySelector('.submenu').style.display = 'none'; // Ocultar el submenu
+                activeSubmenu = null; // Restablecer el submenu activo
+            }
+        });
+    
+        
+    </script>    
+    
+</body>
+</html>

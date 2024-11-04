@@ -1,0 +1,320 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #007acc; /* Color de fondo azul */
+    position: relative; /* Para permitir el uso de pseudo-elementos */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columnas */
+    min-height: 100vh; /* Mínimo 100% de altura de la ventana */
+}
+
+/* Pseudo-elemento para la imagen de fondo */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../IMG/Eslogan.jpg') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra el fondo */
+    opacity: 0.5; /* Opacidad para que sea semi-transparente */
+    z-index: 0; /* Coloca la imagen detrás del contenido */
+}
+
+/* Cabecera */
+header {
+    color: white; /* Texto de la cabecera en blanco */
+    padding: 20px; /* Aumenta el padding para hacer la cabecera más alta */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Para efectos adicionales */
+    z-index: 10; /* Aumenta el z-index para asegurarte que esté en primer plano */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra en el header */
+}
+
+/* Estilo del logo en la cabecera */
+header .logo img {
+    height: 90px; /* Aumenta el tamaño de la altura del logo */
+    width: auto; /* Mantener proporción del logo */
+    transition: transform 0.3s; /* Transición para el logo */
+}
+
+header .logo img:hover {
+    transform: scale(1.1) rotate(3deg); /* Efecto de hover en el logo */
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    list-style: none; /* Eliminar estilo de lista */
+    display: flex; /* Mostrar los elementos en línea */
+    position: relative; /* Para el submenu */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaciado entre los elementos */
+    position: relative; /* Para los efectos del enlace */
+}
+
+/* Estilo de los enlaces en el menú */
+nav ul li a {
+    color: white; /* Color del texto de los enlaces en blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 20px; /* Aumenta el tamaño del texto */
+    transition: color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Color dorado en hover */
+    transform: scale(1.1); /* Aumenta el tamaño del texto al pasar el mouse */
+}
+
+/* Línea debajo de los enlaces */
+nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%; /* Ancho total */
+    height: 2px; /* Altura de la línea */
+    background: #ffd700; /* Línea dorada debajo del enlace */
+    left: 0; /* Alineado a la izquierda */
+    bottom: -5px; /* Espacio desde el texto */
+    transform: scaleX(0); /* Inicia con escala 0 */
+    transition: transform 0.3s; /* Transición suave para la línea */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Muestra la línea al pasar el mouse */
+}
+
+/* Estilo para el menú desplegable */
+.submenu {
+    display: none; /* Oculta el submenu por defecto */
+    position: absolute; /* Posiciona el submenu */
+    background: rgba(0, 0, 0, 0.8); /* Fondo del submenu */
+    padding: 10px 0; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1000; /* O cualquier número alto que asegure que esté al frente */
+}
+
+/* Estilo de los enlaces en el submenu */
+.submenu li a {
+    padding: 10px 20px; /* Espaciado interno para los enlaces del submenu */
+    display: block; /* Cada enlace ocupa toda la línea */
+    color: white; /* Color de texto del submenu */
+}
+
+.submenu li a:hover {
+    color: rgb(255, 217, 0); /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Contenido principal */
+main {
+    flex: 1; /* Hace que el main ocupe el espacio restante */
+    z-index: 1; /* Asegura que el contenido principal esté por encima */
+}
+
+/* Sección de problemas */
+.problems {
+    display: flex; /* Utiliza flexbox para disposición horizontal */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Espaciado externo */
+}
+
+/* Contenedor para la imagen y el texto */
+.content-container {
+    display: flex; /* Utiliza flexbox para disposición horizontal */
+    width: 100%; /* Asegura que el contenedor use todo el ancho */
+}
+
+/* Contenedor de imagen */
+.image-container {
+    flex: 1; /* Ocupa el 50% del contenedor */
+    height: 100%; /* Asegura que ocupe todo el alto del contenedor */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.problems-image {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
+    border-radius: 10px; /* Bordes redondeados en la imagen */
+}
+/* Contenedor de texto */
+.text-container {
+    flex: 1; /* Ocupa el 50% del contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para títulos y párrafos */
+.text-container h2 {
+    font-size: 2em; /* Aumenta el tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.text-container p {
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Tarjetas de problemas */
+.card-container {
+    display: flex; /* Utiliza flexbox para disposición de tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    justify-content: space-between; /* Espaciado entre tarjetas */
+    gap: 20px; /* Espaciado entre tarjetas */
+    width: 100%; /* Asegura que el contenedor use todo el ancho */
+}
+
+.card {
+    background-color: #f9f9f9; /* Color de fondo para las tarjetas */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    width: calc(48% - 10px); /* Ajusta el ancho para el efecto tipo puzzle */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra en las tarjetas */
+    position: relative; /* Para posicionar iconos dentro */
+    display: flex; /* Permite que los hijos se dispongan en flex */
+    flex-direction: column; /* Coloca elementos en columna */
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+}
+
+/* Títulos en las tarjetas que se ajustan a varias filas */
+.card h3 {
+    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 1.5em; /* Tamaño de fuente inicial */
+    line-height: 1.2; /* Ajusta la altura de línea para mejor legibilidad */
+    overflow-wrap: break-word; /* Permite que el texto se divida */
+    word-wrap: break-word; /* Asegura que palabras largas se dividan */
+    hyphens: auto; /* Habilita la separación de sílabas (en navegadores que lo soportan) */
+    max-height: 3.6em; /* Ajusta la altura máxima del título para limitar el espacio */
+    overflow: hidden; /* Esconde el contenido que desborde */
+}
+
+/* Iconos en las tarjetas */
+.card-icon {
+    position: absolute; /* Posiciona el icono dentro de la tarjeta */
+    top: 10px; /* Espaciado superior */
+    left: 10px; /* Espaciado a la izquierda */
+    font-size: 1.5em; /* Tamaño del icono */
+    color: #007acc; /* Color del icono */
+}
+
+/* Botón de cita */
+.appointment {
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Espaciado externo */
+}
+
+.appointment a {
+    display: inline-block; /* Muestra como bloque en línea */
+    background-color: #007acc; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.appointment a:hover {
+    background-color: #005f99; /* Color más oscuro al pasar el mouse */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo del footer */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra el contenido */
+        padding: 10px; /* Reduce el padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* Organiza los elementos en columna */
+        margin-top: 10px; /* Añade espacio superior */
+    }
+
+    .content-container {
+        flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+    }
+
+    .image-container,
+    .text-container {
+        width: 100%; /* Ancho total para ambos contenedores */
+        margin: 0; /* Elimina el margen */
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Ancho total para las tarjetas en dispositivos pequeños */
+        padding: 15px; /* Espaciado interno ajustado */
+    }
+
+    .problems-image {
+        height: auto; /* Ajusta la altura automáticamente */
+        max-height: 200px; /* Fija una altura máxima para la imagen */
+        width: 100%; /* Ancho total para la imagen */
+        object-fit: cover; /* Asegura que la imagen cubra el área asignada */
+    }
+
+    .card h3 {
+        font-size: 1.5em; /* Ajustar el tamaño de fuente en dispositivos pequeños */
+        max-height: none; /* Permitir que el título crezca sin límite en móviles */
+    }
+
+    .card p {
+        font-size: 0.9em; /* Ajustar el tamaño de fuente para párrafos */
+    }
+}
+
+/* Botón personalizado */
+.custom-button {
+    display: inline-block; /* Muestra como bloque en línea */
+    background-color: #007acc; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 15px 30px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    font-size: 1.2em; /* Tamaño de fuente */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Efecto al pasar el ratón */
+.custom-button:hover {
+    background-color: #005f99; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Levanta el botón ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el mouse */
+}
+
+/* Efecto al hacer clic */
+.custom-button:active {
+    transform: translateY(0); /* Vuelve a la posición original al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce la sombra al hacer clic */
+}
+
+/* Estilos adicionales para estado deshabilitado */
+.custom-button:disabled {
+    background-color: #ccc; /* Color de fondo cuando está deshabilitado */
+    color: #666; /* Color del texto cuando está deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor cuando está deshabilitado */
+}

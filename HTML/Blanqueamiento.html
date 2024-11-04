@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/Generales.css"> 
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <title>Blanqueamiento</title>
+</head>
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div class="logo">
+            <img src="../IMG/logo.png" alt="Logo de la Empresa" width="100">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="Odontologia.html">Odontología</a></li>
+                        <li><a href="Ortodoncia.html">Ortodoncia</a></li>
+                        <li><a href="Implantes.html">Implantes</a></li>
+                        <li><a href="Endodoncia.html">Endodoncia</a></li>
+                        <li><a href="EsteticaDental.html">Estética Dental</a></li>
+                        <li><a href="CADCAM.html">CAD CAM</a></li>
+                        <li><a href="Blanqueamiento.html">Blanqueamiento</a></li>
+                    </ul>
+                </li>
+                <li><a href="Consejos.html">Consejos</a></li>
+                <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="problems">
+            <div class="content-container"> <!-- Contenedor para la imagen y el texto -->
+                <div class="image-container">
+                    <img src="../IMG/Blanqueamiento2.jpg" alt="Problemas Dentales" class="problems-image">
+                </div>
+                <div class="text-container"> <!-- Contenedor para el texto -->
+                    <h2>¿Qué es el Blanqueamiento Dental?</h2>
+                    <p>
+                        El blanqueamiento dental es un procedimiento estético que permite aclarar los dientes y eliminar las manchas superficiales, devolviendo la luminosidad y el color blanco natural de la sonrisa. Este tratamiento es ideal para quienes desean mejorar la apariencia de sus dientes de forma rápida y segura.
+                    </p>
+                    <h2>Ventajas del Blanqueamiento Dental</h2>
+                    <div class="card-container">
+                        <div class="card card1">
+                            <h3>Mejora la Estética</h3>
+                            <p>Un tratamiento de blanqueamiento dental mejora significativamente la apariencia de la sonrisa, aumentando la confianza y la autoestima.</p>
+                        </div>
+                        <div class="card card2">
+                            <h3>Procedimiento Seguro</h3>
+                            <p>Realizado por profesionales, el blanqueamiento dental es seguro y no daña la estructura del diente ni el esmalte.</p>
+                        </div>
+                        <div class="card card3">
+                            <h3>Resultados Inmediatos</h3>
+                            <p>Los efectos del blanqueamiento son visibles de inmediato, brindando una sonrisa más brillante en una sola sesión.</p>
+                        </div>
+                        <div class="card card4">
+                            <h3>Duración Prolongada</h3>
+                            <p>Con el cuidado adecuado, los resultados del blanqueamiento dental pueden durar varios meses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment">
+            <button onclick="window.location.href='/agendar-cita'" class="custom-button">Agendar Cita</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>DentalArcada</h2>
+                    <p>Un equipo de personal especializado que mejorará tus dientes y tu sonrisa.</p>
+                    <ul class="contact">
+                        <li><a href="tel:4939335547"><i class="fas fa-phone"></i> 493 933 5547</a></li>
+                        <li><a href="mailto:contacto@dentalarcada.mx"><i class="fas fa-envelope"></i> contacto@dentalarcada.mx</a></li>
+                        <li><a href="https://dentalarcada.mx"><i class="fas fa-globe"></i> dentalarcada.mx</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Acerca de</h2>
+                    <ul>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Consejos</a></li>
+                        <li><a href="#">Aviso de Privacidad</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Agendar Cita</a></li>
+                        <li><a href="#">Arriba</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h2>Reconocimientos</h2>
+                    <img src="../IMG/reconocimiento2.PNG" alt="Logo">
+                    <p>Certificados por la Asociación Americana de Cirugía</p>
+                </div>
+                <div class="col">
+                    <h2>Nuestras Redes</h2>
+                    <p>Visita DentalArcada en nuestras redes sociales y conéctese con nosotros. Asegúrate de seguir nuestras cuentas para actualizaciones periódicas.</p>
+                    <ul class="social">
+                        <li ><a href="https://www.facebook.com/DentalArcada/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/dentalarcada/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/DentalArcada"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-kit-id.js"></script>
+    <script>
+        // Seleccionar todos los elementos de menú
+        const menuItems = document.querySelectorAll('nav ul li');
+
+        // Variable para rastrear el submenu abierto
+        let activeSubmenu = null;
+
+        // Añadir evento para mostrar el submenu al hacer clic
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                // Prevenir el cierre de submenus si ya está activo
+                if (activeSubmenu && activeSubmenu !== item) {
+                    activeSubmenu.querySelector('.submenu').style.display = 'none'; // Ocultar el submenu activo
+                }
+
+                // Alternar el submenu del item actual
+                const submenu = item.querySelector('.submenu');
+                if (submenu) {
+                    const isVisible = submenu.style.display === 'block';
+                    submenu.style.display = isVisible ? 'none' : 'block'; // Alternar la visibilidad
+                    activeSubmenu = isVisible ? null : item; // Actualizar el submenu activo
+                }
+
+                // Evitar que el clic se propague al documento
+                event.stopPropagation();
+            });
+        });
+
+        // Cerrar el submenu si se hace clic fuera de él
+        document.addEventListener('click', function() {
+            if (activeSubmenu) {
+                activeSubmenu.querySelector('.submenu').style.display = 'none'; // Ocultar el submenu
+                activeSubmenu = null; // Restablecer el submenu activo
+            }
+        });
+    </script>
+
+</body>
+</html>

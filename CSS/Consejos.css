@@ -1,0 +1,89 @@
+/* Contenido principal */
+main {
+    flex: 1; /* Hace que el main ocupe el espacio restante */
+    z-index: 1; /* Asegura que el contenido principal esté por encima */
+    padding: 10px; /* Espaciado interno para mejor visualización en pantallas pequeñas */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre las hojas */
+    padding: 20px; /* Espacio interno del contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.page {
+    background: white; /* Color de fondo blanco */
+    border: 1px solid #007acc; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 20px; /* Espaciado interno para las hojas */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    overflow: hidden; /* Asegura que el contenido no sobresalga */
+}
+
+.page:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.page h2 {
+    color: #007acc; /* Color azul para los títulos */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+video {
+    width: 100%; /* Ancho completo del cuadro */
+    height: auto; /* Altura automática */
+    border-radius: 5px; /* Bordes redondeados para los videos */
+}
+
+.main-title {
+    text-align: center;
+    font-size: 3em;
+    margin: 30px 0;
+    background: linear-gradient(to right, #00e1ff, #00ffc8); /* Degradado de azul cielo a verde aqua */
+    -webkit-background-clip: text; /* Clipa el fondo al texto */
+    -webkit-text-fill-color: transparent; /* Hace el color del texto transparente para mostrar el degradado */
+    text-shadow: 
+        2px 2px 0 rgba(255, 255, 255, 1),  /* Trazo blanco (derecha-abajo) */
+        2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    padding: 10px; /* Espaciado alrededor del texto */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .main-title {
+        font-size: 2.5em; /* Tamaño de fuente más pequeño para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .main-title {
+        font-size: 2em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+    }
+
+    .page {
+        padding: 15px; /* Espaciado interno reducido para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.5em; /* Tamaño de fuente aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .page {
+        padding: 10px; /* Espaciado interno mínimo para pantallas muy pequeñas */
+    }
+}

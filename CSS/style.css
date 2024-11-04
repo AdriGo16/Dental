@@ -1,0 +1,1035 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #007acc; /* Color de fondo azul */
+    position: relative; /* Para permitir el uso de pseudo-elementos */
+}
+
+/* Agregamos un pseudo-elemento para la imagen de fondo */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../IMG/Eslogan.jpg') no-repeat center center; /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra el fondo */
+    opacity: 0.5; /* Opacidad para que sea semi-transparente */
+    z-index: 0; /* Coloca la imagen detrás del contenido */
+}
+
+/* Cabecera */
+header {
+    color: white; /* Texto de la cabecera en blanco */
+    padding: 20px; /* Aumenta el padding para hacer la cabecera más alta */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Para efectos adicionales */
+    z-index: 10; /* Aumenta el z-index para asegurarte que esté en primer plano */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra en el header */
+}
+
+
+header .logo img {
+    height: 90px; /* Aumenta el tamaño de la altura del logo */
+    width: 150px; /* Ajusta el ancho del logo para hacerlo más ancho */
+    transition: transform 0.3s; /* Transición para el logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: relative; /* Para el submenu */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaciado entre los elementos */
+    position: relative; /* Para los efectos del enlace */
+}
+
+nav ul li a {
+    color: white; /* Color del texto de los enlaces en blanco */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; /* Aumenta el tamaño del texto */
+    transition: color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Color dorado en hover */
+    transform: scale(1.1); /* Aumenta el tamaño del texto al pasar el mouse */
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ffd700; /* Línea dorada debajo del enlace */
+    left: 0;
+    bottom: -5px; /* Espacio desde el texto */
+    transform: scaleX(0); /* Inicia con escala 0 */
+    transition: transform 0.3s; /* Transición suave para la línea */
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1); /* Muestra la línea al pasar el mouse */
+}
+
+/* Estilo para el menú desplegable */
+.submenu {
+    display: none; /* Oculta el submenu por defecto */
+    position: absolute; /* Posiciona el submenu */
+    background: rgba(0, 0, 0, 0.8); /* Fondo del submenu */
+    padding: 10px 0; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 10; /* Asegura que el submenu esté por encima */
+}
+
+
+.submenu li a {
+    padding: 10px 20px; /* Espaciado interno para los enlaces del submenu */
+    display: block; /* Cada enlace ocupa toda la línea */
+    color: white; /* Color de texto del submenu */
+   
+}
+
+.submenu li a:hover {
+    color: rgb(255, 217, 0); /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Sección del eslogan */
+.slogan {
+    text-align: center; /* Centra el texto en el contenedor */
+    margin: 20px 0; /* Espaciado vertical */
+    color: white; /* Color del texto */
+    padding: 40px 20px; /* Espaciado interior */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Para efectos adicionales */
+    z-index: 1; /* Asegura que el eslogan esté por encima del fondo */
+}
+
+/* Eliminar la sombra del eslogan */
+.slogan h1, .slogan p {
+    position: relative; /* Para asegurarnos de que el texto esté por encima */
+    z-index: 1; /* Eleva el texto por encima del fondo */
+}
+
+.slogan h1 {
+    font-size: 48px; /* Tamaño más grande del eslogan */
+    margin: 0; /* Sin margen superior o inferior */
+    font-family: 'Arial', sans-serif; /* Tipografía */
+    animation: fadeIn 1s ease-in-out; /* Animación para el eslogan */
+}
+
+.slogan p {
+    font-size: 24px; /* Tamaño del texto adicional más grande */
+    margin: 10px 0 20px; /* Espaciado entre los párrafos */
+    font-family: 'Arial', sans-serif; /* Tipografía */
+    animation: slideIn 1s ease-in-out; /* Animación para el texto adicional */
+}
+
+/* Estilos del botón de WhatsApp */
+.whatsapp-button {
+    display: inline-flex; /* Para alinear icono y texto */
+    align-items: center; /* Centra el icono verticalmente */
+    background-color: #25D366; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 12px 24px; /* Espaciado interior del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px; /* Tamaño de texto del botón */
+    transition: background-color 0.3s ease, transform 0.3s; /* Transición suave para el cambio de color */
+    position: relative; /* Asegura que el botón se mantenga en el flujo del documento */
+    z-index: 1; /* Asegura que el botón esté por encima del fondo */
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Color de fondo del botón al pasar el mouse */
+    transform: scale(1.05); /* Aumento de tamaño al pasar el mouse */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Contenedor del slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw; /* Ancho completo de la ventana */
+    max-width: 100%; /* Ancho máximo al 100% */
+    height: 30vw; /* Altura en relación al ancho para mantener cuadrado */
+    max-height: 300px; /* Limita la altura en pantallas grandes */
+}
+
+/* Contenedor interno de las imágenes */
+.slides {
+    display: flex;
+    width: calc(30vw * 12); /* Ajusta el ancho basado en el tamaño cuadrado de cada imagen */
+    animation: continuousSlide 30s linear infinite; /* Animación continua */
+}
+
+/* Estilos para las imágenes */
+.slides img {
+    width: 30vw; /* Ancho cuadrado basado en el viewport */
+    height: 30vw; /* Altura cuadrada */
+    max-width: 100%; /* Ancho máximo */
+    max-height: 100%; /* Altura máxima */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    margin-right: 20px; /* Espacio entre imágenes */
+    flex-shrink: 0; /* Evita que se encojan */
+}
+
+/* Animación de deslizamiento continuo */
+@keyframes continuousSlide {
+    from {
+        transform: translateX(0); /* Inicia desde la posición inicial */
+    }
+    to {
+        transform: translateX(-60vw); /* Desplaza el ancho de la mitad de las imágenes */
+    }
+}
+
+/* Efecto de desvanecimiento en los bordes */
+.slider::before,
+.slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 10vw; /* Ancho del efecto de desvanecimiento */
+    height: 100%; /* Altura completa */
+    z-index: 1;
+}
+
+.slider::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Desvanecimiento a la derecha */
+}
+
+.slider::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Desvanecimiento a la izquierda */
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 576px) {
+    .slider {
+        height: 50vw; /* Ajuste de altura para pantallas pequeñas */
+    }
+    
+    .slides img {
+        width: 50vw; /* Cada imagen es cuadrada y ocupa 50vw */
+        height: 50vw;
+    }
+
+    @keyframes continuousSlide {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100vw); /* Ajuste en pantallas pequeñas */
+        }
+    }
+}
+
+
+/* Estilos de las secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+#comentarios {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8; /* Color de fondo */
+    border: 2px solid #ffd700; /* Borde dorado */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 40px 0; /* Espaciado entre secciones */
+    position: relative; /* Asegura que el contenedor esté en el flujo normal */
+    z-index: 2; /* Asegura que el contenedor esté en primer plano */
+}
+
+.comentarios-container {
+    display: flex; /* Usa Flexbox para alineación horizontal */
+    justify-content: space-between; /* Espacio entre comentarios */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+    max-width: 100%; /* Ocupar el ancho completo de la pantalla */
+    margin: 0 auto; /* Centra el contenedor */
+    position: relative; /* Asegura que el contenedor esté en el flujo normal */
+    z-index: 2; /* Asegura que el contenedor esté en primer plano */
+}
+
+.comentario {
+    background-color: #fff; /* Fondo blanco para los comentarios */
+    border: 1px solid #ddd; /* Borde gris */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px; /* Espaciado entre comentarios */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para dar profundidad */
+    flex: 1 1 calc(25% - 20px); /* Ocupar el ancho total y espacio entre comentarios */
+    min-height: 300px; /* Aumentar la altura mínima para los comentarios */
+    transition: transform 0.3s; /* Animación al cambiar de tamaño */
+    opacity: 1; /* Asegurar que no haya transparencia */
+    position: relative; /* Asegura que el card esté en el flujo normal */
+    z-index: 3; /* Asegura que cada card esté en primer plano */
+}
+
+.comentario:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.comentario img {
+    width: 100%; /* Ancho completo del contenedor del comentario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 200px; /* Altura máxima para que no se desborde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espaciado inferior entre la imagen y el contenido del comentario */
+}
+
+
+.calificacion {
+    color: #ffd700; /* Color dorado para las estrellas */
+    font-size: 20px; /* Tamaño de las estrellas */
+    margin: 10px 0; /* Espaciado entre estrellas y texto */
+}
+
+.estrella {
+    font-size: 20px; /* Tamaño de las estrellas */
+}
+
+/* Estilo adicional para los títulos de los comentarios */
+.titulo-comentarios {
+    font-size: 24px; /* Tamaño del texto del título */
+    font-weight: bold; /* Negrita para mayor énfasis */
+    color: #333; /* Color del texto del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    position: relative; /* Asegura que el título esté en el flujo normal */
+    z-index: 2; /* Asegura que el título esté en primer plano */
+}
+
+
+/* Estilos de las tarjetas del personal */
+.personal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.personal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 320px; /* Ancho de la tarjeta */
+    height: 70vh; /* Altura de la tarjeta */
+    margin: 15px;
+    padding: 15px;
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.personal-card:hover {
+    transform: translateY(-8px);
+}
+
+.personal-card img {
+    border-radius: 10px;
+    width: 95%;
+    height: 65%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.personal-card p {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .personal-card {
+        width: 80%; /* Tarjetas más anchas en tablets */
+        height: auto; /* Ajuste automático de altura */
+    }
+
+    .personal-card img {
+        height: 60%; /* Imagen ocupa un poco menos de altura en tablets */
+    }
+
+    .personal-card p {
+        font-size: 1.1em; /* Texto un poco más pequeño en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .personal-container {
+        flex-direction: column; /* Tarjetas en columna en pantallas pequeñas */
+    }
+
+    .personal-card {
+        width: 90%; /* Tarjeta casi de ancho completo */
+        height: auto; /* Ajuste automático de altura */
+        margin: 10px; /* Margen reducido */
+        padding: 10px;
+    }
+
+    .personal-card img {
+        height: 55%; /* Imagen ocupa un poco menos de altura en móviles */
+    }
+
+    .personal-card p {
+        font-size: 1em; /* Texto más pequeño en pantallas pequeñas */
+    }
+}
+
+/* Estilos generales para la sección de sucursales */
+#sucursales {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 100vw; /* Ocupa el 100% del ancho de la pantalla */
+    max-width: 100%; /* Evita que exceda el ancho en pantallas pequeñas */
+    position: relative;
+    z-index: 1;
+    margin: auto; /* Centra la sección horizontalmente */
+}
+
+/* Estilo del título */
+#sucursales h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor principal */
+.contenedor-sucursales {
+    display: flex;
+    width: 100%;
+    height: 60vh; /* Ocupa el 60% del alto de la pantalla */
+    box-sizing: border-box;
+}
+
+/* Estilo del mapa */
+.mapa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%; /* Ocupa el 100% del contenedor */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo de la lista de sucursales */
+.lista-sucursales {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-left: 1px solid #e0e0e0;
+    height: 100%;
+    overflow-y: auto; /* Habilita el scroll en caso de contenido largo */
+}
+
+.lista-sucursales h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabla-sucursales {
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* Estilo de la fila de sucursal */
+.fila-sucursal {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fila-sucursal:hover {
+    background-color: #f0f8ff;
+}
+
+.info-sucursal {
+    margin-top: 10px;
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contenedor-sucursales {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mapa, .lista-sucursales {
+        width: 100%;
+        height: 50vh; /* Ajusta la altura en pantallas pequeñas */
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
+}
+/* Estilos generales para la sección de servicios */
+#servicios {
+    text-align: center;
+    padding: 40px;
+    position: relative; /* Para permitir el uso de z-index */
+    z-index: 10; /* Trae toda la sección al frente */
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    z-index: 20; /* Coloca el título al frente */
+    position: relative;
+}
+
+/* Contenedor principal con grid */
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 15; /* Coloca el contenedor al frente */
+}
+
+/* Estilos de cada servicio */
+.servicio {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    position: relative;
+    z-index: 30; /* Asegura que cada tarjeta esté en primer plano */
+}
+
+.servicio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las imágenes de icono */
+.servicio .icono {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    z-index: 35; /* Coloca el icono al frente */
+    position: relative;
+}
+
+.servicio .icono:hover {
+    transform: scale(1.1);
+}
+
+.servicio h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 35; /* Coloca el título de la tarjeta al frente */
+}
+
+.servicio p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    position: relative;
+    z-index: 35; /* Coloca el texto al frente */
+}
+
+.servicio a {
+    font-size: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    position: relative;
+    z-index: 35; /* Coloca el enlace al frente */
+}
+
+.servicio a:hover {
+    color: #0044aa;
+    text-decoration: underline;
+}
+
+/* Estilos Responsivos (sin cambios) */
+@media (max-width: 992px) {
+    #servicios h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicio {
+        padding: 20px;
+        min-height: 250px;
+    }
+    
+    .servicio h3 {
+        font-size: 1.3rem;
+    }
+
+    .servicio p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio {
+        padding: 15px;
+        min-height: 200px;
+    }
+    
+    .servicio h3 {
+        font-size: 1.2rem;
+    }
+
+    .servicio p {
+        font-size: 0.9rem;
+    }
+
+    #servicios h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Estilos generales */
+#temas-interes {
+    text-align: center;
+    padding: 30px;
+    background-color: #e9f6f9;
+    position: relative;
+    z-index: 10;
+}
+
+/* Botones ovalados */
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.categoria-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.categoria-btn:hover,
+.categoria-btn.active {
+    background-color: #0056b3;
+}
+
+/* Estilos de la tarjeta */
+.temas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tema-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: none; /* Por defecto, oculta todas las tarjetas */
+}
+
+.tema-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 3px solid #007bff;
+}
+
+.tema-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.tema-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tema-content p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.tema-content a {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tema-content a:hover {
+    text-decoration: underline;
+}
+
+/* Mostrar tarjetas seleccionadas */
+.tema-card.active {
+    display: flex;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .temas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .categoria-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .tema-card {
+        width: 90%;
+    }
+}
+
+
+
+/* Estilos del footer */
+footer {
+    background-color: #007acc;
+    color: white; /* Texto en blanco */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Añadir posición relativa */
+    z-index: 2; /* Asegurar que el footer esté en primer plano */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Estilos para el buscador de sucursales */
+.buscador-sucursales {
+    margin-top: 20px;
+    position: relative; /* Añadir posición relativa */
+    z-index: 2; /* Asegurar que el buscador esté en primer plano */
+    color: white; /* Texto en blanco en el buscador */
+}
+
+.buscador-sucursales input {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #007acc;
+    border-radius: 5px;
+    background-color: white; /* Fondo blanco para el input */
+    position: relative; /* Añadir posición relativa */
+    z-index: 2; /* Asegurar que el input esté en primer plano */
+    color: black; /* Texto en negro en el input */
+}
+
+.buscador-sucursales button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #007acc;
+    color: white; /* Texto en blanco en el botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; /* Añadir posición relativa */
+    z-index: 2; /* Asegurar que el botón esté en primer plano */
+}
+
+.buscador-sucursales button:hover {
+    background-color: #005f8a; /* Azul más oscuro al hacer hover */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .servicio-card, .personal-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .mapa {
+        width: 100%; /* Asegurar que el mapa ocupe todo el ancho en pantallas pequeñas */
+        height: auto; /* Ajustar la altura según el contenido */
+    }
+}
+
+/* Estilos del modal personal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Queda en la pantalla */
+    z-index: 999; /* Estar en primer plano */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: hidden; /* Ocultar cualquier desbordamiento */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.5s ease; /* Transición para la opacidad */
+}
+
+/* Añadir clase para mostrar el modal */
+.modal.show {
+    display: block; /* Mostrar el modal */
+    opacity: 1; /* Hacerlo visible */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 800px;
+    position: absolute; /* Cambiar a 'absolute' para centrado exacto */
+    top: 50%; /* Centro verticalmente */
+    left: 50%; /* Centro horizontalmente */
+    transform: translate(-50%, -50%) scale(0.7); /* Iniciar con un tamaño más pequeño */
+    transition: transform 0.5s ease; /* Transición para la transformación */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Mostrar el contenido del modal */
+.modal.show .modal-content {
+    transform: translate(-50%, -50%) scale(1); /* Escalar al tamaño normal */
+}
+
+#modal-image {
+    display: block; /* Asegurarse de que la imagen sea un bloque */
+    margin: 0 auto; /* Centrar la imagen */
+    width: auto; /* Ancho automático */
+    max-width: 100%; /* No exceder el ancho del modal */
+    max-height: 60vh; /* No exceder el 60% de la altura de la ventana */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: contain; /* Asegurarse de que la imagen se ajuste completamente */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.close {
+    color: #aaa;
+    float: right; /* Posicionar a la derecha */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.button-volver {
+    display: block; /* Hacer que el botón sea un bloque */
+    margin: 20px auto; /* Centrarlo horizontalmente */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+.button-volver:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+
+/* Estilos para el modal específico de Temas de Interés */
+.tema-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.185);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tema-modal.tema-show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.tema-modal-content {
+    background-color: #f9f9f9;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.tema-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tema-close:hover {
+    color: #000;
+}
+
+.tema-modal-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.tema-modal-text {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.tema-agendar-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.tema-agendar-btn:hover {
+    background-color: #45a049;
+}
+
+/* Modal oculto */
+#temaInteresModal {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Modal activo con animación */
+#temaInteresModal.active-modal {
+    opacity: 1;
+    transform: scale(1);
+}
